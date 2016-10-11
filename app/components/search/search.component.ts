@@ -6,7 +6,6 @@
 	moduleId:module.id,
     selector: 'search',
     templateUrl: 'search.component.html',
-    providers: [SpotifyService]
 })
 export class SearchComponent {
 	searchStr:string;
@@ -17,7 +16,6 @@ export class SearchComponent {
 	searchMusic(){
 		this._spotifyService.searchMusic(this.searchStr)
 		.subscribe(res => {
-			//console.log(res.artists.items);
 			this.searchRes = res.artists.items;
 		})
 		
